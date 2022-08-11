@@ -2,4 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 0.3s;
+}
+
+:root {
+  --bright-yellow: #F9D030;
+  --hot-pink: #F62AA0;
+  --lime-green: #B8EE30;
+  --light-blue: #26DFD0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
