@@ -19,7 +19,7 @@ body {
 
 /* ===== spinner animation ===== */
 *::selection {
-  background-color: var(--hot-pink);
+  background-color: var(--primary-color);
   color: white;
 }
 
@@ -27,9 +27,11 @@ body {
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-100px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -61,15 +63,19 @@ body {
 #spinner span:nth-child(1) {
   animation-delay: 0s;
 }
+
 #spinner span:nth-child(2) {
   animation-delay: 0.2s;
 }
+
 #spinner span:nth-child(3) {
   animation-delay: 0.4s;
 }
+
 #spinner span:nth-child(4) {
   animation-delay: 0.6s;
 }
+
 #spinner span:nth-child(5) {
   animation-delay: 0.8s;
 }
@@ -138,7 +144,7 @@ main .books-bg::after {
   box-shadow: 0 0px 10px #ccc9c9;
 }
 
-.search-section .container > div:nth-child(1) {
+.search-section .container>div:nth-child(1) {
   position: relative;
   border-bottom: solid #b0b0b0 1px;
 }
@@ -155,7 +161,7 @@ main .books-bg::after {
   font-size: 1rem;
 }
 
-.search-section .container > div:nth-child(1) i {
+.search-section .container>div:nth-child(1) i {
   position: absolute;
   color: var(--primary-color);
   right: 2rem;
@@ -193,4 +199,98 @@ main .books-bg::after {
 
 .container .results .card button:hover {
   width: 20%;
+}
+
+/* Modal Container Style  */
+
+.upmodal {
+  display: none;
+}
+
+.upmodal[show] {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+/* Modal Style  */
+
+.upmodal[show] .modal {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  left: 15%;
+  top: 15%;
+  width: 70%;
+  height: 70%;
+  border-radius: 10px;
+  overflow: auto;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Modal Close button Style  */
+
+.upmodal[show] .modal #btnClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: #eee;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.upmodal[show] .modal-content {
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  text-align: center;
+}
+
+.upmodal[show] .modal-title {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.upmodal[show] .modal-author {
+  color: rgb(105, 105, 105);
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.upmodal[show] .modal-date {
+  text-align: start;
+  margin-top: 20px;
+}
+
+.upmodal[show] .modal-description {
+  color: #000;
+  font-size: 15px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  line-height: 157.2%;
+
+  color: #444444;
+
+
+
+
+}
+
+.upmodal[show] .modal-img {
+  width: 100%;
+  user-select: none;
 }
