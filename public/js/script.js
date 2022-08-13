@@ -35,7 +35,3 @@ const getSearchResults = (data) => {
 searchInput.addEventListener('input', () => {
   fetch(`/search/${searchInput.value}`, getSearchResults);
 });
-
-submit.addEventListener('click', (e) => {
-  e.preventDefault();
-});
