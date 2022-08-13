@@ -47,18 +47,12 @@ searchInput.addEventListener('input', () => {
 
 
 const renderDetails = (data) => {
-  console.log(data)
   const title = data.volumeInfo.title;
   const authors = data.volumeInfo.authors.join(' & ');
   const img = data.volumeInfo.imageLinks.medium;
   const description = data.volumeInfo.description;
   const publisher = `${data.volumeInfo.publishedDate}, ${data.volumeInfo.publisher}`
-  console.log(title);
-  console.log(authors);
-  console.log(img);
-  console.log(description);
-  console.log(publisher);
-console.log(document.querySelector('.modal img'))
+
   document.querySelector('.modal img').src = img;
   document.querySelector('.modal-title').innerText = title;
   document.querySelector('.modal-author').innerText = authors;
