@@ -1,62 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./public/style.css" />
-    <title>auto-complete</title>
-  </head>
 
-  <body>
-    <!-- Spinner Layout  -->
-    <div id="spinner">
-      <span></span><span></span><span></span><span></span><span></span>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./public/style.css" />
+  <title>auto-complete</title>
+</head>
+
+<body>
+  <!-- Spinner Layout  -->
+  <div id="spinner">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- Modal  -->
+  <section class="upmodal">
+    <div class="modal">
+      <button id="btnClose"><i style="color: white;" class="fa-solid fa-xmark"></i></button>
+      <img src="./public/images/notFound.webp" alt="">
+      <div class="modal-content">
+        <h1 class="modal-title">Book Title</h1>
+        <h3 class="modal-author">Book Author</h3>
+        <p class="modal-description"><b>Description:</b> Book Description Book Description Book Description Book
+          Description Book Description Book Description Book Description Book Description Book Description Book
+          Description Book Description Book Description Book Description Book Description Book Description Book
+          Description Book Description Book Description Book Description Book Description Book Description Book
+          Description Book Description Book Description Book Description </p>
+        <div class="modal-date"><b>Date:</b> 2020-01-01</div>
+      </div>
+    </div>
+  </section>
+
+  <header>
+    <div class="logo">
+      <h1>
+        <i class="fa-solid fa-book-open"></i>
+        Bookle
+      </h1>
     </div>
 
-    <header>
-      <div class="logo">
-        <h1>
-          <i class="fa-solid fa-book-open"></i>
-          Bookle
-        </h1>
-      </div>
+    <nav>
+      <ul>
+        <li class="active">home</li>
+        <li onclick="ShowDetails(1)">about</li>
+        <li>contact</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="books-bg"></section>
 
-      <nav>
-        <ul>
-          <li class="active">home</li>
-          <li>about</li>
-          <li>contact</li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="books-bg"></section>
-
-      <section class="search-section">
-        <div class="container">
-          <div>
-            <form>
-              <input type="text" placeholder="search for a book" />
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <button type="submit" style="display: none"></button>
-            </form>
-          </div>
-
-          <div class="results"></div>
+    <section class="search-section">
+      <div class="container">
+        <div>
+          <form>
+            <input type="text" placeholder="search for a book" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <button type="submit" style="display: none"></button>
+          </form>
         </div>
-      </section>
-    </main>
-    <footer></footer>
-    <script src="./public/js/fetch.js"></script>
-    <script src="./public/js/logic.js"></script>
-    <script src="./public/js/script.js"></script>
-  </body>
+
+        <div class="results"></div>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+  <script src="./public/js/fetch.js"></script>
+  <script src="./public/js/logic.js"></script>
+  <script src="./public/js/script.js"></script>
+</body>
+
 </html>

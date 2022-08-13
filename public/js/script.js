@@ -5,6 +5,19 @@ window.addEventListener('load', () => {
   }, 2000);
 });
 
+btnClose.addEventListener('click', () => {
+  document.querySelector('.upmodal').removeAttribute('show')
+})
+
+function ShowDetails(id) {
+
+  // Send Api 
+
+  // Render Data 
+
+  document.querySelector('.upmodal').setAttribute('show', '')
+}
+
 // fetching search result
 const searchInput = document.querySelector('input');
 const submit = document.querySelector('form button');
@@ -35,3 +48,5 @@ const getSearchResults = (data) => {
 searchInput.addEventListener('input', () => {
   fetch(`/search/${searchInput.value}`, getSearchResults);
 });
+
+
