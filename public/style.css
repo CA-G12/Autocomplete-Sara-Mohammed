@@ -146,11 +146,6 @@ main .books-bg::after {
 
 .search-section .container>div:nth-child(1) {
   position: relative;
-  border-bottom: solid #b0b0b0 1px;
-}
-
-.search-section .container div:last-child {
-  border: 0;
 }
 
 .search-section .container input {
@@ -176,6 +171,10 @@ main .books-bg::after {
 
 .search-section .container .results .card:last-child {
   border: 0;
+}
+
+.search-section .container .results .card:first-child {
+  border-top: solid #b0b0b0 1px;
 }
 
 .container .results .card p {
