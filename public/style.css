@@ -290,6 +290,6 @@ main .books-bg::after {
 }
 
 .upmodal[show] .modal-img {
-  width: 100%;
+  max-width: 600px !important;
   user-select: none;
 }
